@@ -5,7 +5,7 @@ namespace PokemonBattler
 	{
 		public string name;
 		public int health;
-		public int attackDamage;
+        public int attackDamage;
 		public string move;
 
 		public Pokemon(string Name, int Health, int AttackDamage, string Move = "Tackle")
@@ -16,9 +16,15 @@ namespace PokemonBattler
 			move = Move;
 		}
 
-		public string testFunction()
+		public void takeDamage(int damage)
 		{
-			return "Hi!";
+			Health = health -= damage;
+		}
+
+		public int Health
+		{
+			get => health;
+			set => health = value;
 		}
 	}
 }

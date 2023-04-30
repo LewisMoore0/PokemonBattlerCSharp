@@ -25,5 +25,14 @@ public class PokemonTest
         pokemon.move.Should().Be("Tackle");
 
     }
+
+    [Fact]
+    public void takeDamageShouldReducePokemonsHealth()
+    {
+        var pokemon = new Pokemon("Lewis", 100, 25);
+        pokemon.takeDamage(50);
+
+        pokemon.Health.Should().Be(50);
+    }
 }
 
