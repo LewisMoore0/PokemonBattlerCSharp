@@ -7,12 +7,23 @@ namespace PokemonBattler.Tests.PokemonTests;
 public class PokemonTest
 {
     [Fact]
-    public void shouldHaveNameProperty()
+    public void shouldHavePropertiesOnInstantiation()
     {
-        var lewis = new Pokemon();
-        var result = lewis.testFunction();
+        var pokemon = new Pokemon("Lewis", 100, 25, "HeadButt");
 
-        result.Should().Be("Hi!");
+        pokemon.name.Should().Be("Lewis");
+        pokemon.health.Should().Be(100);
+        pokemon.attackDamage.Should().Be(25);
+        pokemon.move.Should().Be("HeadButt");
+    }
+
+    [Fact]
+    public void shouldHaveMovePropertySetByDefault()
+    {
+        var pokemon = new Pokemon("Lewis", 100, 25);
+
+        pokemon.move.Should().Be("Tackle");
+
     }
 }
 
