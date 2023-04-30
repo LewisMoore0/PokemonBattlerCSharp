@@ -9,10 +9,6 @@
 
   <ItemGroup>
     <Folder Include="obj\" />
-    <Folder Include="Pokemon\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Pokemon\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.11.0" />

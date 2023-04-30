@@ -1,4 +1,4 @@
-﻿using PokemonBattler.Pokemon;
+﻿using PokemonBattler;
 using Xunit;
 using FluentAssertions;
 
@@ -9,7 +9,7 @@ public class PokemonTest
     [Fact]
     public void shouldHaveNameProperty()
     {
-        var lewis = new PokemonClass();
+        var lewis = new Pokemon();
         var result = lewis.testFunction();
 
         result.Should().Be("Hi!");

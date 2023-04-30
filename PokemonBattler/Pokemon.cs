@@ -1,9 +1,9 @@
 ﻿using System;
-namespace PokemonBattler.Pokemon
+namespace PokemonBattler
 {
-	public class PokemonClass
+	public class Pokemon
 	{
-		public PokemonClass()
+		public Pokemon()
 		{
 		}
 
