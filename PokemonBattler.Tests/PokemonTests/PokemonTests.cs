@@ -12,7 +12,7 @@ public class PokemonTest
         var pokemon = new Pokemon("Lewis", 100, 25, "HeadButt");
 
         pokemon.name.Should().Be("Lewis");
-        pokemon.health.Should().Be(100);
+        pokemon.Health.Should().Be(100);
         pokemon.attackDamage.Should().Be(25);
         pokemon.move.Should().Be("HeadButt");
     }
@@ -33,6 +33,31 @@ public class PokemonTest
         pokemon.takeDamage(50);
 
         pokemon.Health.Should().Be(50);
+    }
+
+    [Fact]
+    public void attackReturnsAttackDamage()
+    {
+        var pokemon = new Pokemon("Lewis", 100, 25);
+
+        pokemon.attack().Should().Be(25);
+    }
+
+    [Fact]
+    public void hasFaintedReturnsTrueIfHealthIsZero()
+    {
+        var pokemon = new Pokemon("Lewis", 0, 25);
+
+        pokemon.hasFainted().Should().Be(true);
+
+    }
+
+    [Fact]
+    public void hasFaintedReturnsFalseWhenOverZero()
+    {
+        var pokemon = new Pokemon("Lewis", 100, 25);
+
+        pokemon.hasFainted().Should().Be(false);
     }
 }
 

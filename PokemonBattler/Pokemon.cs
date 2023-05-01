@@ -16,16 +16,32 @@ namespace PokemonBattler
 			move = Move;
 		}
 
-		public void takeDamage(int damage)
+        public int Health
+        {
+            get => health;
+            set => health = value;
+        }
+
+        public void takeDamage(int damage)
 		{
 			Health = health -= damage;
 		}
 
-		public int Health
+		public int attack()
 		{
-			get => health;
-			set => health = value;
+			return attackDamage;
 		}
+
+		public bool hasFainted()
+		{
+			if (health == 0)
+			{
+				return true;
+			}
+
+			return false;
+		}
+
 	}
 }
 
