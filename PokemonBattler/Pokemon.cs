@@ -27,20 +27,9 @@ namespace PokemonBattler
 			Health = health -= damage;
 		}
 
-		public int attack()
-		{
-			return attackDamage;
-		}
+		public int attack() => attackDamage;
 
-		public bool hasFainted()
-		{
-			if (health == 0)
-			{
-				return true;
-			}
-
-			return false;
-		}
+		public bool hasFainted() => health == 0 ? true : false;
 
 	}
 }
