@@ -5,10 +5,10 @@ namespace PokemonBattler
 {
 	public class FirePokemon : Pokemon
 	{
-        public string name;
-        public int health;
-        public int attackDamage;
-        public string move;
+        public new string name;
+        public new int health;
+        public new int attackDamage;
+        public new string move;
         public string type;
 
         public FirePokemon(string Name, int Health, int AttackDamage, string Move = "Tackle"): base(Name, Health, AttackDamage, Move)
@@ -25,6 +25,12 @@ namespace PokemonBattler
         {
             return pokemon.type == "Grass" ? true : false;
         }
+
+        public bool isWeakAgainst(WaterPokemon pokemon)
+        {
+            return pokemon.type == "Water" ? true : false;
+        }
+
     }
 }
 
